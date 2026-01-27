@@ -6,8 +6,7 @@
 # Description: Disables Take Exclusive Control setting for Headset devices to improve Amazon Connect Functionality
 # ==========================================
 
-# Install AudioDeviceCmdlet powershell module 
-# Cmdlet hosted at https://github.com/frgnca/AudioDeviceCmdlets
+# Install AudioDeviceCmdlet powershell module - https://github.com/frgnca/AudioDeviceCmdlets
 
 Install-Module -Name AudioDeviceCmdlets -Force
 Import-Module AudioDeviceCmdlets
