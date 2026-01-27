@@ -17,7 +17,7 @@ Import-Module AudioDeviceCmdlets
 $Default_AD = ""
 $Default_CD = ""
 
-# Retrieve Audio Device GUID's and pipe them to variable container
+# Retrieve Audio Device GUID's and pipe them to variable
 
 Get-AudioDevice -List | foreach-object $Default_AD
 Get-AudioDevice -List | foreach-object $Default_CD  
