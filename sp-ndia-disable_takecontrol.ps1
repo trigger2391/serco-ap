@@ -11,31 +11,27 @@
 Install-Module -Name AudioDeviceCmdlets -Force
 Import-Module AudioDeviceCmdlets
 
-# Variable Declarations
-
-$Default_AD = ""
-$Default_CD = ""
-
 # Retrieve Audio Device GUID's and pipe them to variable
 
-Get-AudioDevice -List | foreach-object $Default_AD
-Get-AudioDevice -List | foreach-object $Default_CD  
+Get-AudioDevice -Playback | foreach-object $Default_AD_Playback
+Get-AudioDevice -PlaybackCommunication | foreach-object $Default_CD_Playback
+Get-AudioDevice -Recording | foreach-object $Default_AD_Recording  
+Get-AudioDevice -RecordingCommunication | foreach-object $Default_CD_Recording
 
-# Apply regkey to Default Audio Device and Default Communications Device that was previously pulled from OS
+# Apply regkey to Input & Output sources for both Default Audio Device and Default Communications Device
 
-$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{$Default_AD}\Properties New-ItemProperty" 
+$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{$Default_AD_Recording}\Properties New-ItemProperty" 
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
 New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
 
-$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Playback\{$Default_AD}\Properties New-ItemProperty" 
+$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Playback\{$Default_AD_Playback}\Properties New-ItemProperty" 
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
 New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
 
-$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{$Default_CD}\Properties New-ItemProperty" 
+$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{$Default_CD_Recording}\Properties New-ItemProperty" 
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
 New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
 
-$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Playback\{$Default_CD}\Properties New-ItemProperty" 
+$regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Playback\{$Default_CD_Playback}\Properties New-ItemProperty" 
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
 New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
-
