@@ -8,6 +8,6 @@ The script has the following workflow.
 2. Pull GUID of current Default Audio Device and Default Communications Device (Awaiting Testing)
 3. Store the GUID into a variable (Awaiting Testing)
 4. Route the GUID of DAD and DCD to a variable (Awaiting Testing)
-5. 6. Apply the setting to the device (Awaiting Testing)
+5.  Apply the setting to the device (Awaiting Testing)
 
 
