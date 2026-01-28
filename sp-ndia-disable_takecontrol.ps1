@@ -18,7 +18,7 @@ Get-AudioDevice -Recording | foreach-object $Default_AD_Recording
 Get-AudioDevice -PlaybackCommunication | foreach-object $Default_CD_Playback
 Get-AudioDevice -RecordingCommunication | foreach-object $Default_CD_Recording
 
-# Apply regkey to Playback & Recording for Default Audio Device and Default Communications Device
+# Apply regkey to to disable Take Exclusive Control on Playback & Recording for Default Audio Device and Default Communications Device
 
 $regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capture\{$Default_AD_Recording}\Properties New-ItemProperty" 
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
