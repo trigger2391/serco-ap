@@ -14,8 +14,8 @@ Import-Module AudioDeviceCmdlets
 # Retrieve Audio Device GUID's and pipe them to variable
 
 Get-AudioDevice -Playback | foreach-object $Default_AD_Playback
-Get-AudioDevice -PlaybackCommunication | foreach-object $Default_CD_Playback
 Get-AudioDevice -Recording | foreach-object $Default_AD_Recording  
+Get-AudioDevice -PlaybackCommunication | foreach-object $Default_CD_Playback
 Get-AudioDevice -RecordingCommunication | foreach-object $Default_CD_Recording
 
 # Apply regkey to Input & Output sources for both Default Audio Device and Default Communications Device
