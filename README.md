@@ -9,4 +9,10 @@ The script has the following workflow.
 3. Store the GUID into a variable (Awaiting Testing)
 5. Use the variable to apply the regkey setting to the Playback and Capture settings for the device (Awaiting Testing)
 
+Packaging (After testing has confirmed script works reliably)
+1. Write Auto_logon Script (WIP)
+2. Package sp-ndia-disable_exclusive_control and Auto_logon into .intunewin application (WIP)
+3. Test Deployment
+4. Full Deployment
+
 
