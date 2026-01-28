@@ -11,7 +11,7 @@
 Install-Module -Name AudioDeviceCmdlets -Force
 Import-Module AudioDeviceCmdlets
 
-# Retrieve Audio Device GUID's and pipe them to variable
+# Retrieve Audio Device GUID's and pipe them to a variable
 
 Get-AudioDevice -Playback | foreach-object $Default_AD_Playback
 Get-AudioDevice -Recording | foreach-object $Default_AD_Recording  
