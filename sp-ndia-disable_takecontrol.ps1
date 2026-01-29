@@ -36,7 +36,6 @@ $regPath = "HKLM:\S0FTWARE\Microsoft\Windows\CurrentVersion\MMDevices\Audio\Capt
 $key = "b3f8fa53-0004-438e-9003-51a46e139bfc"
 New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
 
-# Experimental
-# Autoset permission for all applications to use microphone
+# Allow all applications to access the microphone
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" /v Value /t REG_SZ /d Allow /f
