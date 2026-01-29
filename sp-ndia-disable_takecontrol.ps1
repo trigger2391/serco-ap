@@ -3,7 +3,7 @@
 # Author: Matthew Bernardin
 # Date: 2026-01-23
 # Version 0.1
-# Description: Disables Take Exclusive Control setting for Headset devices and autosets Microphone permissions to allow for all apps
+# Description: Disables Take Exclusive Control setting for Headset devices and sets grants all apps microphone permissions
 # ==========================================
 
 # Install AudioDeviceCmdlet powershell module - https://github.com/frgnca/AudioDeviceCmdlets
