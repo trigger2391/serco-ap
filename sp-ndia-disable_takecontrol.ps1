@@ -39,4 +39,4 @@ New-ItemProperty -Path $regPath -Name $key -Value 0 -PropertyType DWORD
 # Experimental
 # Autoset permission for all applications to use microphone
 
-# reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" /v Value /t REG_SZ /d Allow /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\microphone" /v Value /t REG_SZ /d Allow /f
