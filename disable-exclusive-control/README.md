@@ -11,7 +11,7 @@ The script has the following workflow.
 
 Packaging (After testing has confirmed script works reliably)
 1. Write Auto_logon Script (WIP)
-2. Package serco-ap_disable_exclusive_control and Auto_logon into .intunewin application (WIP)
+2. Package disable_takecontrol and Auto_logon into .intunewin application (WIP)
 3. Test Deployment
 4. Full Deployment
 
