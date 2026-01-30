@@ -1,5 +1,5 @@
 # ==========================================
-# Script Name: disable_exclusive_control
+# Script Name: disable_takecontrol
 # Author: Matthew Bernardin
 # Date: 2026-01-23
 # Version 0.2
